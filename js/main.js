@@ -50,10 +50,38 @@ let listaPlatillos = [
     },
 ];
 
+let maindiv = document.getElementById("contenido");
 
-let navraiz = document.getElementById("navcont");
-let cabecera1=document.createElement("h1");
-cabecera1.innerHTML="CODIGO RESTO";
-navraiz.appendChild(cabecera1);
+listaPlatillos.forEach(function(caja){
+   
+    let tarjeta = document.createElement("div");
+    tarjeta.classList.add("tarjeta");
 
-let divprincipal =document.getElementById("principal");
+    let divimg=document.createElement("div");
+    divimg.classList.add("imagen");
+    let img=document.createElement("img");
+    img.setAttribute("src",caja.imagen);
+    
+    let divcont=document.createElement("div");
+    divcont.classList.add("texto");
+    divcont.innerHTML=`<h4>${caja.nombre}</h4>
+                       <p>${caja.descripcion}</p>`;
+
+    let divprecio=document.createElement("div");
+    divprecio.classList.add("precio");
+    divprecio.innerHTML=`<span>${caja.precio}</span>
+                         <button class="btn-agregar"> Agregar</button>`;
+   
+    maindiv.appendChild(tarjeta);
+    tarjeta.appendChild(divimg);
+    divimg.appendChild(img);
+    tarjeta.appendChild(divcont);
+    divcont.appendChild(divprecio);
+   
+});
+
+
+
+
+
+
