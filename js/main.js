@@ -79,6 +79,17 @@ listaPlatillos.forEach(function(caja){
     divcont.appendChild(divprecio);
    
 });
+/**REQUERIDA
+    * 1. mostrar estos platillos de forma identica a como lo hace preview
+    *
+    * //ESTO ES OPCIONAL, aqui tendrías que investigar
+    * 2. OPCIONAL (cuando de click en el boton agregar hacer que eso se sume al carrito)
+    * 	-tips getElementsByClassName, y pueden agregar attributos adicionales
+    * 3. OPCIONAL (mostrar el resumen del carrito en la parte izquierda)
+    * 4. OPCIONAL (guardar el resumen en el LocalStorage)
+    */
+   
+   //lo ponen el discord
 
 
 
